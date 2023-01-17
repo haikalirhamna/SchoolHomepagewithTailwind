@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        /* @apply py-4 px-8 text-white font-bold rounded-full; */
+        @apply py-2 lg:py-4 px-4 lg:px-8 text-xs lg:text-base text-white font-bold rounded-full;
+        background-color: #5E8B7E;
+    }
+    a {
+        color: #5E8B7E;
+        font-weight: bold;
+    }
+    .scroll {
+        background-color: #5E8B7E;
+    }
+    .active {
+        background-color: #fff !important;
+    }
+    .bg-green {
+        background-color: #F7FBFA;
+    }
+    .bg-footer {
+        background-color: #0E2123;
+    }
+    .gridAuto {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+    }
+    .side-bar {
+        visibility: hidden;
+        width: 0vw;
+        height: 100vh;
+        background-color: #5E8B7E;
+        top: 0;
+        transition: ease-in 2s;
+    }
+    .side-bar.show {
+        visibility: visible;
+        width: 100vw;
+        /* transition: ease-in 2s; */
+    }
+    .max-h {
+        max-height: 14rem;
+    }
+    @media only screen and (min-width: 470px) {
+        .max-h {
+            max-height: 18rem;
+        }
+    }
+    @media only screen and (min-width: 640px) {
+        .max-h {
+            max-height: 22rem;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        .max-h {
+            max-height: 24rem;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .max-h {
+            max-height: 32rem;
+        }
+        .gridAuto{
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+    @media only screen and (min-width: 1280px) {
+        .max-h {
+            max-height: 100vh;
+        }
+    }
+    /* .fade {
+        animation: fade-in 5s;
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateX -100px;
+            }
+            100% {
+                opacity: 1;
+                transform: translateX 0px;
+            }
+        }
+    } */
+}
